@@ -1,0 +1,249 @@
+@charset "UTF-8";
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 70px; }
+  @media (max-width: 768px) {
+    #header {
+      padding: 20px;
+      height: 60px; } }
+  @media (max-width: 768px) {
+    #header .header-logo {
+      width: 107px; } }
+  #header .btn {
+    display: none; }
+  #header #mask {
+    display: none; }
+
+@media (max-width: 768px) {
+  #navi {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 10;
+    width: 180px;
+    height: 100%;
+    background-color: #dd1b58;
+    box-shadow: -10px 0 35px -20px black;
+    opacity: 0;
+    transition: all 0.5s; } }
+#navi .navi-menu {
+  display: flex;
+  column-gap: 30px; }
+  @media (max-width: 768px) {
+    #navi .navi-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 180px;
+      padding: 90px 20px 20px 50px;
+      row-gap: 25px; } }
+  #navi .navi-menu li {
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    line-height: 1; }
+    #navi .navi-menu li.company a {
+      color: #dd1b58; }
+      @media (max-width: 768px) {
+        #navi .navi-menu li.company a {
+          color: #fff; } }
+    #navi .navi-menu li a {
+      color: #333; }
+      #navi .navi-menu li a:hover {
+        color: #dd1b58; }
+
+.hamburger {
+  display: none; }
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      padding: 0 16px;
+      border: none;
+      outline: none;
+      background: none;
+      background-color: #dd1b58;
+      cursor: pointer;
+      appearance: none; } }
+  @media (max-width: 768px) {
+    .hamburger span {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      position: relative;
+      transition: ease .4s;
+      display: block;
+      left: 0;
+      border-radius: 4px; }
+      .hamburger span:nth-child(1) {
+        top: 0; }
+      .hamburger span:nth-child(2) {
+        margin: 6px 0; }
+      .hamburger span:nth-child(3) {
+        top: 0; } }
+
+@media (max-width: 768px) {
+  .open #navi {
+    right: 0;
+    opacity: 1; }
+    .open #navi .navi-menu .company a {
+      opacity: 0.6; }
+    .open #navi .navi-menu a {
+      color: #fff; }
+  .open .hamburger span:nth-child(1) {
+    top: 8px;
+    transform: rotate(45deg); }
+  .open .hamburger span:nth-child(2) {
+    opacity: 0; }
+  .open .hamburger span:nth-child(3) {
+    top: -8px;
+    transform: rotate(-45deg); } }
+
+.main .main-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21vh;
+  background-image: url(img/pc_header.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 60px; }
+  @media (max-width: 768px) {
+    .main .main-visual {
+      background-image: url(img/sp_header.jpg);
+      margin-bottom: 40px; } }
+  .main .main-visual .title-area {
+    color: #fff;
+    text-align: center;
+    line-height: 1; }
+    .main .main-visual .title-area .title {
+      font-size: 2.5rem;
+      letter-spacing: 3.5px; }
+      @media (max-width: 768px) {
+        .main .main-visual .title-area .title {
+          font-size: 1.7rem; } }
+.main .content .info_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  font-size: 0.95rem; }
+  @media (max-width: 768px) {
+    .main .content .info_list {
+      font-size: 0.9rem; } }
+  .main .content .info_list dt {
+    width: 20%;
+    padding: 30px;
+    border-bottom: #dcdbdb solid 1px; }
+    @media (max-width: 768px) {
+      .main .content .info_list dt {
+        padding: 20px 0;
+        width: 30%; } }
+  .main .content .info_list dd {
+    width: 80%;
+    padding: 30px;
+    border-bottom: #dcdbdb solid 1px; }
+    @media (max-width: 768px) {
+      .main .content .info_list dd {
+        padding: 20px 0;
+        width: 70%; } }
+.main .content .map iframe {
+  width: 100%;
+  height: 400px;
+  border: 0; }
+  @media (max-width: 768px) {
+    .main .content .map iframe {
+      height: 300px; } }
+.main .content .news-list {
+  margin: 70px 0; }
+  .main .content .news-list .news-list-li {
+    font-size: 0.935rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8; }
+    @media (max-width: 768px) {
+      .main .content .news-list .news-list-li {
+        line-height: 1.7; } }
+    .main .content .news-list .news-list-li .news-list-link {
+      display: flex;
+      color: #333; }
+      .main .content .news-list .news-list-li .news-list-link:hover {
+        color: #dd1b58; }
+      .main .content .news-list .news-list-li .news-list-link .date {
+        margin-right: 20px; }
+      @media (max-width: 768px) {
+        .main .content .news-list .news-list-li .news-list-link {
+          display: block; } }
+
+.footer {
+  color: #fff;
+  background-color: #dd1b58;
+  padding: 60px 20px 50px; }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 0 30px; } }
+  .footer .footer-nav {
+    margin-bottom: 20px; }
+    .footer .footer-nav .nav ul {
+      display: flex;
+      column-gap: 30px; }
+      @media (max-width: 768px) {
+        .footer .footer-nav .nav ul {
+          column-gap: 20px; } }
+      .footer .footer-nav .nav ul li {
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        font-size: 0.85rem; }
+        .footer .footer-nav .nav ul li a {
+          color: #fff; }
+        @media (max-width: 768px) {
+          .footer .footer-nav .nav ul li {
+            font-size: 0.8rem; } }
+  .footer p {
+    font-size: 0.75rem; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 16px;
+  color: #333; }
+
+a {
+  text-decoration: none;
+  transition: 0.3s; }
+
+a:hover {
+  opacity: 0.8; }
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  /*←画像の下に隙間ができないように*/ }
+
+li {
+  list-style: none; }
+
+.content {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px; }
+  @media (max-width: 768px) {
+    .content {
+      padding: 0 20px; } }
+
+/*# sourceMappingURL=company.css.map */
